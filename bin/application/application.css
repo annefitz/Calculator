@@ -1,0 +1,64 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.vbox1
+{
+	-fx-background-color:rgb(20,64,144);
+	-fx-padding: 20; 
+	-fx-font-size: 30;
+}
+
+.button{
+	-fx-background-color:rgb(174,184,219);
+}
+
+.btnEqual{
+	-fx-background-color:rgb(61,127,61);
+	-fx-text-fill:white;
+}
+
+.btnClear{
+	-fx-background-color:rgb(155,56,54);
+	-fx-text-fill:white;
+}
+
+.btnBackspace{
+	-fx-background-color:rgb(80,80,80);
+	-fx-text-fill:white;
+}
+
+.vbox2
+{
+	-fx-background-color:rgb(207,59,62);
+	-fx-padding: 20; 
+	-fx-font-size: 20;
+}
+
+.vbox3
+{
+	-fx-background-color:rgb(90,207,9);
+	-fx-padding: 20; 
+	-fx-font-size: 20;
+}
+
+
+.style1
+{
+	-fx-background-color:rgb(217,144,185);
+}
+
+.style2
+{
+	-fx-text-fill:red;
+}
+
+.screen1
+{
+	-fx-background-color: #FFFFFF;
+	    -fx-min-width: 50;
+    -fx-min-height: 50;
+}
+
+.screen2
+{
+	-fx-background-color: #FFFFFF;
+	-fx-text-alignment:left ;
+}
