@@ -19,7 +19,7 @@ public class MyQueue<T> {
         arr = (T[]) new Object[2];
     }
 
-	//Resize the MyQueue to the capacity as the input argument specifies
+	//Resizes the MyQueue to the capacity as the input argument specifies
     private void resize(int capacity)
     {
         T[] tmp = (T[]) new Object[capacity];
@@ -32,10 +32,9 @@ public class MyQueue<T> {
         rear = total;
     }
     
-    //Check if the queue is empty: if empty, returns true; otherwise returns false
+    //Checks if the queue is empty: if empty, returns true; otherwise returns false
     public boolean isEmpty()
     {
-    	//Implementation here...
     	if (total == 0){
     		return true;
     	}
@@ -44,14 +43,12 @@ public class MyQueue<T> {
     	}
     }
 
-    //Add one element "ele" into the queue
-    //Attention: (1) if the current queue is full, you need to resize it to twice of the current size.
-    //           (2) if the "rear" is already pointing to the end of the queue, but there is available space
-    	//               in the beginning, you need to "loop" the rear position.
+    //Adds one element "ele" into the queue
+    //	(1) if the current queue is full, resizes it to twice of the current size.
+    //  (2) if the "rear" is already pointing to the end of the queue, but there is available space
+    	//       in the beginning, "loops" the rear position.
     public void enqueue(T ele)
-    {
-    	//Implementation here...
-    	
+    {	
     	//if current queue is full, resize
     	if (rear >= arr.length){
     		resize(arr.length*2);
@@ -65,15 +62,13 @@ public class MyQueue<T> {
     }
 
     
-    //Delete the first (oldest) element from the queue and return this element.
-    //Below is just an example code, you need to modify it. 
-    //Attention: (1) To save space, if the current number of elements is less than or equal to 1/4 of the
-    	// 			     the capacity, shrink the capacity to 1/2 (half) of the original size.
+    //Deletes the first (oldest) element from the queue and returns this element.
+
     	//			 (2) If the "first" is pointing to the end of the queue, but there is available space
     //				 in the beginning, you need to consider "loop" the first position.
     public T dequeue()
     {
-    		//Implementation here... 
+    	// if number of elements is less than or equal to 1/4 of the capacity, shrink capacity to half original size
     	if (total <= arr.length/4){
     		resize(arr.length/2);
     	}
@@ -81,6 +76,7 @@ public class MyQueue<T> {
         arr[first] = null;
         first++;
         total--;
+     // if first is pointing to end of the queue, but available space in beginning, consider loop in first position
         if (first == arr.length){
     		first = 0;
     	}
